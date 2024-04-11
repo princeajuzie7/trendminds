@@ -12,7 +12,7 @@ let email = document.getElementById('email').value
 let countrycode = document.getElementById('countrycode').value
 let submitText = document.getElementById('signupbutton')
 let payload = {fullname, phone, email, countrycode}
-    console.log(payload)
+   
 
     submitText.textContent = "loading..."
 
@@ -57,13 +57,18 @@ function handleCancel() {
  * @param {type} paramName - description of parameter
  * @return {type} description of return value
  */
-function handleOpen() {
-  let modal  = document.getElementById('modal')
-  let openBtn = document.querySelectorAll('#openbtn').forEach((item)=>{
+document.addEventListener('DOMContentLoaded', function () {
+  handleOpen();
+});
 
-    item.addEventListener('click', function () {
-     modal.style.display = 'block'
-    })
-    console.log(item, "clicked")
-  })
+function handleOpen() {
+  let modal = document.getElementById('modal');
+  let openBtn = document.querySelectorAll('#openbtn');
+
+  openBtn.forEach((item) => {
+    item.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent default button behavior
+      modal.style.display = 'block';
+    });
+  });
 }
