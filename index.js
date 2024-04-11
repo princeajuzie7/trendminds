@@ -22,7 +22,7 @@ let payload = {fullname, phone, email, countrycode}
     if(data.code === 200){
         submitText.textContent = "thanks for signing up" 
         setTimeout(() => {
-            window.location.href = "https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"
+            window.location.href = "https://tmh.ediaudiotech.com/"
         }, 3000);
     } 
     console.log(data);
